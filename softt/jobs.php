@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'employee') {
 
 $jobs = $conn->query("SELECT jobs.*, users.username AS company_name FROM jobs 
                       JOIN users ON jobs.company_id = users.id 
-                      ORDER BY posted_at DESC");
+                       ORDER BY posted_at DESC");
 ?>
 
 <!DOCTYPE html>
